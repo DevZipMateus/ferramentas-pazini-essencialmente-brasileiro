@@ -9,11 +9,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Logo */}
           <div className="text-center md:text-left">
-            <img
-              src={logo}
-              alt="Pazini Ferramentas"
-              className="h-16 w-auto mx-auto md:mx-0 mb-4"
-            />
+            <div className="inline-block bg-white rounded-lg p-3 mb-4">
+              <img
+                src={logo}
+                alt="Pazini Ferramentas"
+                className="h-12 w-auto"
+              />
+            </div>
             <p className="text-white/70 text-sm">
               Simples. Forte. Essencial.
             </p>
