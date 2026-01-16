@@ -1,34 +1,39 @@
-import { Disc, Paintbrush, Wrench, Cog, Package, Hammer } from "lucide-react";
 import productsBg from "@/assets/products-bg.jpg";
+import cuttingDiscs from "@/assets/products/cutting-discs.jpg";
+import sprayPaints from "@/assets/products/spray-paints.jpg";
+import screws from "@/assets/products/screws.jpg";
+import handTools from "@/assets/products/hand-tools.jpg";
+import tapes from "@/assets/products/tapes.jpg";
+import construction from "@/assets/products/construction.jpg";
 
 const products = [
   {
-    icon: Disc,
+    image: cuttingDiscs,
     title: "Discos de corte",
     description: "Discos para corte de metal, concreto e materiais diversos. Qualidade e durabilidade garantidas.",
   },
   {
-    icon: Paintbrush,
+    image: sprayPaints,
     title: "Tintas spray e silicones",
     description: "Tintas spray em diversas cores, silicones e colas para suas necessidades de acabamento.",
   },
   {
-    icon: Cog,
+    image: screws,
     title: "Parafusos industriais",
     description: "Ampla variedade de parafusos, porcas e arruelas para aplicações industriais e construção.",
   },
   {
-    icon: Wrench,
+    image: handTools,
     title: "Ferramentas manuais",
     description: "Chaves, alicates, martelos e toda linha de ferramentas manuais profissionais.",
   },
   {
-    icon: Package,
+    image: tapes,
     title: "Fitas e adesivos",
     description: "Fitas isolantes, adesivas, silver tape e materiais para fixação e vedação.",
   },
   {
-    icon: Hammer,
+    image: construction,
     title: "Materiais de construção",
     description: "Produtos essenciais para construção civil, reformas e manutenções em geral.",
   },
@@ -61,17 +66,23 @@ const Products = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className="group bg-background rounded-xl p-6 md:p-8 border border-border hover:border-accent transition-all duration-300 hover:shadow-lg"
+              className="group bg-background rounded-xl overflow-hidden border border-border hover:border-accent transition-all duration-300 hover:shadow-lg"
             >
-              <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                <product.icon className="w-8 h-8 text-accent group-hover:text-accent-foreground transition-colors" />
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src={product.image} 
+                  alt={product.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
-              <h3 className="text-2xl font-display text-foreground mb-3">
-                {product.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {product.description}
-              </p>
+              <div className="p-6">
+                <h3 className="text-2xl font-display text-foreground mb-3">
+                  {product.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {product.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
