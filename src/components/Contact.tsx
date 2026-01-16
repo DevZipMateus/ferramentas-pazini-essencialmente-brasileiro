@@ -78,7 +78,7 @@ const Contact = () => {
             com os melhores preços da região.
           </p>
           <a
-            href="https://wa.me/5528999999999"
+            href="https://wa.me/5528999335726"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 sm:gap-3 bg-accent text-accent-foreground px-6 sm:px-10 py-4 sm:py-5 rounded-md font-semibold text-base sm:text-lg hover:bg-accent/90 transition-all hover:scale-105 yellow-glow"
