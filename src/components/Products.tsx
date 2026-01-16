@@ -48,38 +48,38 @@ const Products = () => {
         style={{ backgroundImage: `url(${productsBg})` }}
       />
       <div className="absolute inset-0 bg-secondary/80" />
-      <div className="container mx-auto relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <div className="accent-line mx-auto mb-4" />
-          <h2 className="text-4xl md:text-5xl font-display text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-foreground mb-3 sm:mb-4 px-2">
             Nossos produtos
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Atuamos no mercado de ferragens e ferramentas, trazendo solução e praticidade
             para quem quer construir um sonho
           </p>
         </div>
 
         {/* Products Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {products.map((product, index) => (
             <div
               key={index}
-              className="group bg-background rounded-xl overflow-hidden border border-border hover:border-accent transition-all duration-300 hover:shadow-lg"
+              className="group bg-background rounded-lg sm:rounded-xl overflow-hidden border border-border hover:border-accent transition-all duration-300 hover:shadow-lg"
             >
-              <div className="aspect-square overflow-hidden">
+              <div className="aspect-[4/3] sm:aspect-square overflow-hidden">
                 <img 
                   src={product.image} 
                   alt={product.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-display text-foreground mb-3">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-display text-foreground mb-2 sm:mb-3">
                   {product.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {product.description}
                 </p>
               </div>
@@ -88,15 +88,15 @@ const Products = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-4">
+        <div className="text-center mt-8 sm:mt-12">
+          <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
             Não encontrou o que procura? Entre em contato conosco!
           </p>
           <a
             href="https://wa.me/5528999999999"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-md font-semibold hover:bg-accent/90 transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-md font-semibold text-sm sm:text-base hover:bg-accent/90 transition-all hover:scale-105"
           >
             Solicitar orçamento
           </a>
