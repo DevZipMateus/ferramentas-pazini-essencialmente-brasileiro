@@ -42,7 +42,7 @@ const Products = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${productsBg})` }}
       />
-      <div className="absolute inset-0 bg-secondary/95" />
+      <div className="absolute inset-0 bg-secondary/80" />
       <div className="container mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
