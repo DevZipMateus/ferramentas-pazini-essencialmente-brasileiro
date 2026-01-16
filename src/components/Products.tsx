@@ -1,4 +1,5 @@
 import { Disc, Paintbrush, Wrench, Cog, Package, Hammer } from "lucide-react";
+import productsBg from "@/assets/products-bg.jpg";
 
 const products = [
   {
@@ -35,8 +36,14 @@ const products = [
 
 const Products = () => {
   return (
-    <section id="produtos" className="section-padding bg-secondary">
-      <div className="container mx-auto">
+    <section id="produtos" className="relative section-padding overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${productsBg})` }}
+      />
+      <div className="absolute inset-0 bg-secondary/95" />
+      <div className="container mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="accent-line mx-auto mb-4" />

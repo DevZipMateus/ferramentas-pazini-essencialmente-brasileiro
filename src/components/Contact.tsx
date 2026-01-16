@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import contactBg from "@/assets/contact-bg.jpg";
 
 const contactInfo = [
   {
@@ -29,8 +30,14 @@ const contactInfo = [
 
 const Contact = () => {
   return (
-    <section id="contato" className="section-padding bg-background">
-      <div className="container mx-auto">
+    <section id="contato" className="relative section-padding overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${contactBg})` }}
+      />
+      <div className="absolute inset-0 bg-background/95" />
+      <div className="container mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="accent-line mx-auto mb-4" />

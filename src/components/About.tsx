@@ -1,4 +1,5 @@
 import { Target, Eye, Heart, History } from "lucide-react";
+import aboutBg from "@/assets/about-bg.jpg";
 
 const values = [
   { icon: "💎", title: "Honestidade", description: "Transparência nas vendas, nos preços e nas relações" },
@@ -11,8 +12,14 @@ const values = [
 
 const About = () => {
   return (
-    <section id="sobre" className="section-padding bg-background">
-      <div className="container mx-auto">
+    <section id="sobre" className="relative section-padding overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${aboutBg})` }}
+      />
+      <div className="absolute inset-0 bg-background/95" />
+      <div className="container mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="accent-line mx-auto mb-4" />
