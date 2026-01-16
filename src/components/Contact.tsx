@@ -37,43 +37,43 @@ const Contact = () => {
         style={{ backgroundImage: `url(${contactBg})` }}
       />
       <div className="absolute inset-0 bg-background/80" />
-      <div className="container mx-auto relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <div className="accent-line mx-auto mb-4" />
-          <h2 className="text-4xl md:text-5xl font-display text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-foreground mb-3 sm:mb-4 px-2">
             Entre em contato
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Estamos prontos para atender você com a melhor solução em ferramentas e ferragens
           </p>
         </div>
 
         {/* Contact Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {contactInfo.map((info, index) => (
             <div
               key={index}
               className="industrial-card text-center"
             >
-              <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <info.icon className="w-6 h-6 text-accent" />
+              <div className="w-12 sm:w-14 h-12 sm:h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <info.icon className="w-5 sm:w-6 h-5 sm:h-6 text-accent" />
               </div>
-              <h3 className="text-lg font-display text-foreground mb-2">
+              <h3 className="text-base sm:text-lg font-display text-foreground mb-1 sm:mb-2">
                 {info.title}
               </h3>
-              <p className="text-foreground font-medium">{info.content}</p>
-              <p className="text-muted-foreground text-sm mt-1">{info.subtitle}</p>
+              <p className="text-sm sm:text-base text-foreground font-medium break-words">{info.content}</p>
+              <p className="text-xs sm:text-sm text-muted-foreground mt-1">{info.subtitle}</p>
             </div>
           ))}
         </div>
 
         {/* CTA Section */}
-        <div className="bg-primary rounded-2xl p-8 md:p-12 text-center">
-          <h3 className="text-3xl md:text-4xl font-display text-white mb-4">
+        <div className="bg-primary rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 text-center">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white mb-3 sm:mb-4 px-2">
             Pronto para começar seu projeto?
           </h3>
-          <p className="text-white/80 mb-8 max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-white/80 mb-6 sm:mb-8 max-w-xl mx-auto px-2">
             Entre em contato conosco pelo WhatsApp e receba atendimento personalizado
             com os melhores preços da região.
           </p>
@@ -81,10 +81,10 @@ const Contact = () => {
             href="https://wa.me/5528999999999"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-10 py-5 rounded-md font-semibold text-lg hover:bg-accent/90 transition-all hover:scale-105 yellow-glow"
+            className="inline-flex items-center gap-2 sm:gap-3 bg-accent text-accent-foreground px-6 sm:px-10 py-4 sm:py-5 rounded-md font-semibold text-base sm:text-lg hover:bg-accent/90 transition-all hover:scale-105 yellow-glow"
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 sm:w-6 h-5 sm:h-6"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"

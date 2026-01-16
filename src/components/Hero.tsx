@@ -33,14 +33,14 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-1 bg-accent z-10" />
       <div className="absolute bottom-0 left-0 w-full h-1 bg-accent z-10" />
 
-      <div className="container mx-auto px-4 relative z-10 pt-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-12">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo */}
-          <div className="mb-8 animate-fade-in">
+          <div className="mb-6 sm:mb-8 animate-fade-in">
             <img
               src={logo}
               alt="Pazini Ferramentas"
-              className="h-24 md:h-32 w-auto mx-auto brightness-0 invert"
+              className="h-20 sm:h-24 md:h-32 w-auto mx-auto brightness-0 invert"
             />
           </div>
 
@@ -48,46 +48,48 @@ const Hero = () => {
           <h1 className="sr-only">Pazini Ferramentas</h1>
 
           {/* Slogan */}
-          <p className="text-accent font-display text-2xl md:text-3xl tracking-widest mb-6 animate-fade-in animate-delay-100">
+          <p className="text-accent font-display text-xl sm:text-2xl md:text-3xl tracking-widest mb-4 sm:mb-6 animate-fade-in animate-delay-100">
             Simples. Forte. Essencial.
           </p>
 
           {/* H2 - Description */}
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display text-white leading-tight mb-8 animate-fade-in animate-delay-200">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-display text-white leading-tight mb-6 sm:mb-8 px-2 animate-fade-in animate-delay-200">
             Ferramentas e ferragens de qualidade para construir seus sonhos
           </h2>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto animate-fade-in animate-delay-300">
+          <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 sm:mb-10 max-w-2xl mx-auto px-2 animate-fade-in animate-delay-300">
             Atendimento honesto e próximo, ajudando profissionais e moradores da região
             a realizarem seus trabalhos com segurança e confiança.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in animate-delay-400">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 animate-fade-in animate-delay-400">
             <a
               href="https://wa.me/5528999999999"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-md font-semibold text-lg hover:bg-accent/90 transition-all hover:scale-105 yellow-glow"
+              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-md font-semibold text-base sm:text-lg hover:bg-accent/90 transition-all hover:scale-105 yellow-glow"
             >
               Fale conosco pelo WhatsApp
-              <ArrowRight size={20} />
+              <ArrowRight size={18} className="sm:w-5 sm:h-5" />
             </a>
             <button
               onClick={handleContactClick}
-              className="inline-flex items-center justify-center gap-2 bg-white/10 text-white border border-white/30 px-8 py-4 rounded-md font-semibold text-lg hover:bg-white hover:text-primary transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-white/10 text-white border border-white/30 px-6 sm:px-8 py-3 sm:py-4 rounded-md font-semibold text-base sm:text-lg hover:bg-white hover:text-primary transition-all"
             >
               Conheça nossos produtos
             </button>
           </div>
 
           {/* Hours Badge */}
-          <div className="mt-16 inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 animate-fade-in animate-delay-400">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            <span className="text-white/90 text-sm">
-              Segunda a sexta: 7:30 às 17:30 | Sábado: 7:30 às 11:30
-            </span>
+          <div className="mt-10 sm:mt-16 inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-full px-4 sm:px-6 py-3 animate-fade-in animate-delay-400">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+              <span className="text-white/90 text-xs sm:text-sm">Seg-Sex: 7:30 às 17:30</span>
+            </div>
+            <span className="hidden sm:block text-white/50">|</span>
+            <span className="text-white/90 text-xs sm:text-sm">Sáb: 7:30 às 11:30</span>
           </div>
         </div>
       </div>
