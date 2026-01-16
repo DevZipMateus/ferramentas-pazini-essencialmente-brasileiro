@@ -66,7 +66,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 animate-fade-in animate-delay-400">
             <a
-              href="https://wa.me/5528999999999"
+              href="https://wa.me/5528999335726"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-md font-semibold text-base sm:text-lg hover:bg-accent/90 transition-all hover:scale-105 yellow-glow"
