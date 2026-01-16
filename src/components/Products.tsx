@@ -42,9 +42,9 @@ const products = [
 const Products = () => {
   return (
     <section id="produtos" className="relative section-padding overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with Parallax */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{ backgroundImage: `url(${productsBg})` }}
       />
       <div className="absolute inset-0 bg-secondary/80" />

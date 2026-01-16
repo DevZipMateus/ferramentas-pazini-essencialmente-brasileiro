@@ -13,9 +13,9 @@ const values = [
 const About = () => {
   return (
     <section id="sobre" className="relative section-padding overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with Parallax */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{ backgroundImage: `url(${aboutBg})` }}
       />
       <div className="absolute inset-0 bg-background/80" />
